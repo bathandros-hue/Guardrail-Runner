@@ -1,0 +1,5 @@
+[
+  {"id": "read_notes", "tool": "read_text", "args": {"path": "notes.txt"}},
+  {"id": "statistics", "tool": "count_words", "depends_on": ["read_notes"], "args": {"text": "$ref:read_notes"}},
+  {"id": "references", "tool": "find_lines", "args": {"path": "notes.txt", "needle": "agent"}}
+]
